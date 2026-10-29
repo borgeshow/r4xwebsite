@@ -1,0 +1,74 @@
+/* ==========================================================================
+   R4X — base: fontes, tokens e reset
+   Cores extraídas dos ícones exportados do Figma.
+   ========================================================================== */
+
+/* Helvetica Now Display ---------------------------------------------------- */
+@font-face { font-family: "Helvetica Now Display"; src: url("../assets/fonts/HelveticaNowDisplay-Thin.woff2") format("woff2"); font-weight: 100; font-style: normal; font-display: swap; }
+@font-face { font-family: "Helvetica Now Display"; src: url("../assets/fonts/HelveticaNowDisplay-ThinIta.woff2") format("woff2"); font-weight: 100; font-style: italic; font-display: swap; }
+@font-face { font-family: "Helvetica Now Display"; src: url("../assets/fonts/HelveticaNowDisplay-ExtLt.woff2") format("woff2"); font-weight: 200; font-style: normal; font-display: swap; }
+@font-face { font-family: "Helvetica Now Display"; src: url("../assets/fonts/HelveticaNowDisplay-ExtLtIta.woff2") format("woff2"); font-weight: 200; font-style: italic; font-display: swap; }
+@font-face { font-family: "Helvetica Now Display"; src: url("../assets/fonts/HelveticaNowDisplay-Light.woff2") format("woff2"); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: "Helvetica Now Display"; src: url("../assets/fonts/HelveticaNowDisplay-LightIta.woff2") format("woff2"); font-weight: 300; font-style: italic; font-display: swap; }
+@font-face { font-family: "Helvetica Now Display"; src: url("../assets/fonts/HelveticaNowDisplay-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Helvetica Now Display"; src: url("../assets/fonts/HelveticaNowDisplay-RegIta.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "Helvetica Now Display"; src: url("../assets/fonts/HelveticaNowDisplay-Medium.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Helvetica Now Display"; src: url("../assets/fonts/HelveticaNowDisplay-MedIta.woff2") format("woff2"); font-weight: 500; font-style: italic; font-display: swap; }
+@font-face { font-family: "Helvetica Now Display"; src: url("../assets/fonts/HelveticaNowDisplay-Bold.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Helvetica Now Display"; src: url("../assets/fonts/HelveticaNowDisplay-BoldIta.woff2") format("woff2"); font-weight: 700; font-style: italic; font-display: swap; }
+@font-face { font-family: "Helvetica Now Display"; src: url("../assets/fonts/HelveticaNowDisplay-ExtraBold.woff2") format("woff2"); font-weight: 800; font-style: normal; font-display: swap; }
+@font-face { font-family: "Helvetica Now Display"; src: url("../assets/fonts/HelveticaNowDisplay-ExtBdIta.woff2") format("woff2"); font-weight: 800; font-style: italic; font-display: swap; }
+@font-face { font-family: "Helvetica Now Display"; src: url("../assets/fonts/HelveticaNowDisplay-ExtBlk.woff2") format("woff2"); font-weight: 950; font-style: normal; font-display: swap; }
+@font-face { font-family: "Helvetica Now Display"; src: url("../assets/fonts/HelveticaNowDisplay-ExtBlkIta.woff2") format("woff2"); font-weight: 950; font-style: italic; font-display: swap; }
+
+/* Tokens -------------------------------------------------------------------- */
+:root {
+  --c-white: #FEFEFE;
+  --c-ink: #1E1E1E;
+  --c-gray: #5D5D5D;
+  --c-teal: #1C5056;
+  --c-teal-bright: #00626D;
+  --c-sage: #D1DEDB;
+
+  --font: "Helvetica Now Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  /* Frame de referência do Figma: 1920px */
+  --container: 1450px;
+  --gutter: clamp(16px, 4vw, 48px);
+}
+
+/* Reset --------------------------------------------------------------------- */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--c-ink);
+  background: var(--c-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, p, figure, blockquote { margin: 0; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+img, svg, video { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+
+.container {
+  width: min(100% - 2 * var(--gutter), var(--container));
+  margin-inline: auto;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+}
